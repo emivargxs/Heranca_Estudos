@@ -31,11 +31,11 @@ public class PessoaJuridica extends Pessoas{
 
     @Override
     public boolean localizaCNPJ(String cnpjBuscado){
-        return this.cnpj.contains(cnpjBuscado);
+        return this.getCnpj().contains(cnpjBuscado);
     }
 
     @Override
     public boolean localizaAno(String anoBuscado){
-      return this.anoFundacao.contains(anoBuscado);
+      return this.getAnoFundacao().contains(anoBuscado);
     }
 }

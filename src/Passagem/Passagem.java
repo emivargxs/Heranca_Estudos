@@ -43,4 +43,12 @@ public class Passagem {
       
     }
 
-}
+    public boolean buscarAssento(String nomeAssento){
+        return false;
+    }
+
+    public String buscarPorNome(String nomePassageiro){
+        return null;
+    }
+    }
+

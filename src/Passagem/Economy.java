@@ -26,4 +26,17 @@ public class Economy extends Passagem {
                 ", custoPassagem=" + getCustoPassagem() +
                 '}';
     }
+
+    @Override
+    public boolean buscarAssento(String nomeAssento){
+        return this.getAssento().contains(nomeAssento);
+    }
+    @Override
+    public String buscarPorNome(String nomePassageiro){
+       if(getNome().contains(nomePassageiro)){
+         return getNome();
+       }else{
+        return null;
+       }
+    }
 }
