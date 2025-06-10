@@ -27,11 +27,10 @@ public class Economy extends Passagem {
                 '}';
     }
 
-    @Override
+    
     public boolean buscarAssento(String nomeAssento){
         return this.getAssento().contains(nomeAssento);
     }
-    @Override
     public String buscarPorNome(String nomePassageiro){
        if(getNome().contains(nomePassageiro)){
          return getNome();
