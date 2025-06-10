@@ -37,7 +37,7 @@ public class App {
 
             for(Pessoas listaJuridica : listaPessoas){
                 if(listaJuridica instanceof PessoaJuridica){
-                    boolean cnpjEncontrado = listaJuridica.localizaCNPJ("852254851214");
+                    boolean cnpjEncontrado = ((PessoaJuridica)listaJuridica).localizaCNPJ("852254851214");
                     int id = listaJuridica.getId();
                     if(cnpjEncontrado){
                         System.out.println("PESSOA JURIDICA\n");
@@ -45,7 +45,7 @@ public class App {
                         System.out.println("ID: " + id + " CNPJ ENCONTRADO\n");
                     }
 
-                    boolean anoEncontrado = listaJuridica.localizaAno("2020");
+                    boolean anoEncontrado = ((PessoaJuridica)listaJuridica).localizaAno("2020");
                     if(anoEncontrado){
                         System.out.println("Procurando ano 2020");
                         System.out.println("ID: " + id + "Ano encontrado");

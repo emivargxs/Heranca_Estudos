@@ -28,17 +28,17 @@ public class SistemaDePassagens {
             System.out.println(lista);
         }
         
-        
-        //Lista de assento desejado
-        for(Passagem listaAssentoDesejado : listaPassageiros){
-            if(listaAssentoDesejado instanceof Economy){
+       
+        for (Passagem listaAssentoDesejado : listaPassageiros) {
+            if (listaAssentoDesejado instanceof Economy) {
                 String nome = listaAssentoDesejado.getNome();
-                boolean assentoEncontrado = listaAssentoDesejado.buscarAssento("EC1");
-                if(assentoEncontrado){
+                // Se quiser usar o método sobrescrito de Economy, faça o cast:
+                boolean assentoEncontrado = ((Economy) listaAssentoDesejado).buscarAssento("EC1");
+                if (assentoEncontrado) {
                     System.out.println("Assento Buscado:" + assentoEncontrado);
                     System.out.println(nome);
                     System.out.println("\n");
-                }     
+                }
             }
         }
         
@@ -46,7 +46,7 @@ public class SistemaDePassagens {
         for(Passagem listaPassagemPorNome : listaPassageiros){
             String idEncontrado = listaPassagemPorNome.getNome();
         if(listaPassagemPorNome instanceof Economy){
-            String nomeEncontrado = listaPassagemPorNome.buscarPorNome("Maria");
+            String nomeEncontrado = ((Economy) listaPassagemPorNome).buscarPorNome("Maria");
             if(nomeEncontrado != null){
                 System.out.println(nomeEncontrado);
             }
